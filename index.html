@@ -336,41 +336,8 @@
             text-align: center;
         }
 
-        #back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        #back-to-top:hover {
-            background-color: #0056b3;
-        }
-
-        /* Media Queries */
-        @media (max-width: 1024px) {
-            header.sticky {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 10px 20px;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
+        /* Responsive Design */
+        @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
                 gap: 10px;
@@ -379,193 +346,173 @@
             .service-item {
                 width: calc(50% - 20px);
             }
-        }
-
-        @media (max-width: 768px) {
-            header.sticky {
-                padding: 10px 15px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .service-item {
-                width: 100%;
-            }
 
             .about-content {
                 flex-direction: column;
             }
+        }
 
-            .about-text {
-                text-align: center;
+        @media (max-width: 480px) {
+            nav a {
+                font-size: 16px;
+                padding: 8px 12px;
             }
 
-            .about-text ul {
-                padding-right: 0;
+            .service-item {
+                width: 100%;
+                margin: 10px 0;
             }
 
-            .video-container {
-                max-width: 100%;
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .intro h2,
+            #about h2,
+            #contact h2 {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Header -->
     <header class="sticky">
         <div class="logo">
-            <img src="images/logo.jpg" alt="التوحيد للمكيفات بمكه Logo">
+            <img src="images/logo.png" alt="التوحيد للمكيفات بمكه">
         </div>
         <nav>
             <ul>
                 <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#services">الخدمات</a></li>
-                <li><a href="#about">معلومات عنا</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#about">عن الشركة</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="home" class="hero">
-            <h1>مرحبا بكم في التوحيد للمكيفات بمكه</h1>
-            <p>نحن نقدم خدمات تكييف الهواء في مكة المكرمة.</p>
-            <div class="slideshow-container">
-                <div class="slideshow">
-                    <img src="images/man.jpg" alt="صورة مكيفات 1">
-                    <img src="images/man2.jpg" alt="صورة مكيفات 2">
-                    <img src="images/man4.jpeg" alt="خدماتنا">
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>التوحيد للمكيفات بمكه</h1>
+        <p>أفضل خدمات المكيفات في مكة المكرمة</p>
+        <div class="slideshow-container">
+            <div class="slideshow">
+                <img src="images/slide1.jpg" alt="Slide 1">
+                <img src="images/slide2.jpg" alt="Slide 2">
+                <img src="images/slide3.jpg" alt="Slide 3">
             </div>
-        </section>
-        <section id="services" class="intro">
-            <h2>خدماتنا</h2>
-            <div class="service-item">
-                <img src="images/man.jpg" alt="خدماتنا">
-                <p>تركيب جميع أنواع المكيفات</p>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="intro">
+        <h2>خدماتنا</h2>
+        <div class="service-item">
+            <img src="images/service1.jpg" alt="Service 1">
+            <p>تركيب المكيفات</p>
+        </div>
+        <div class="service-item">
+            <img src="images/service2.jpg" alt="Service 2">
+            <p>صيانة المكيفات</p>
+        </div>
+        <div class="service-item">
+            <img src="images/service3.jpg" alt="Service 3">
+            <p>تنظيف المكيفات</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>عن الشركة</h2>
+        <div class="about-content">
+            <div class="video-container">
+                <video controls>
+                    <source src="videos/about.mp4" type="video/mp4">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
             </div>
-            <div class="service-item">
-                <img src="images/man2.jpg" alt="خدماتنا">
-                <p>صيانة دورية وإصلاح الأعطال</p>
+            <div class="about-text">
+                <ul>
+                    <li>فريق عمل محترف وذو خبرة عالية</li>
+                    <li>استخدام أحدث التقنيات والمعدات</li>
+                    <li>خدمة العملاء على مدار الساعة</li>
+                    <li>أسعار تنافسية</li>
+                    <li>ضمان على جميع الأعمال</li>
+                </ul>
             </div>
-            <div class="service-item">
-                <img src="images/man3.jpg" alt="خدماتنا">
-                <p>صيانة وغسيل</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <div class="social-media">
+            <div class="child">
+                <button class="button">
+                    <img src="images/facebook.png" alt="Facebook">
+                </button>
             </div>
-            <div class="service-item">
-                <img src="images/man4.jpeg" alt="خدماتنا">
-                <p>خدمات أخرى</p>
+            <div class="child">
+                <button class="button">
+                    <img src="images/twitter.png" alt="Twitter">
+                </button>
             </div>
-        </section>
-        <section id="about">
-            <h2>معلومات عنا</h2>
-            <div class="about-content">
-                <div class="video-container">
-                    <video controls>
-                        <source src="images/video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="about-text">
-                    <p>نحن شركة متخصصة في تكييف الهواء بخبرة واسعة في مكة المكرمة. نقدم خدمات شاملة لتلبية جميع
-                        احتياجاتكم في تكييف الهواء، بما في ذلك التركيب والصيانة والإصلاح. فريقنا من المحترفين مؤهل ومدرب
-                        على أعلى مستوى لضمان حصولكم على أفضل خدمة.</p>
-                    <p>نحن نسعى دائماً لتحقيق رضا العملاء من خلال تقديم حلول فعالة وموثوقة. سواء كنتم بحاجة إلى تركيب
-                        نظام تكييف جديد أو صيانة النظام الحالي، نحن هنا لمساعدتكم. اتصلوا بنا اليوم لتجربة خدماتنا
-                        الممتازة.</p>
-                    <ul>
-                        <li>تركيب جميع أنواع المكيفات</li>
-                        <li>صيانة دورية وإصلاح الأعطال</li>
-                        <li>خدمة عملاء متوفرة على مدار الساعة</li>
-                        <li>صيانة وغسيل</li>
-                        <li>فك وتركيب</li>
-                        <li>تسليك نحاس جديد</li>
-                        <li>تأسيس مشاريع جديدة</li>
-                        <li>حل مشكلة تنسيم الفريون</li>
-                        <li>حل مشكلة تقطير المياه</li>
-                    </ul>
-                </div>
+            <div class="child">
+                <button class="button">
+                    <img src="images/instagram.png" alt="Instagram">
+                </button>
             </div>
-        </section>
-        <section id="contact">
-            <h2>اتصل بنا</h2>
-            <div class="social-media">
-                <div class="child">
-                    <a href="https://wa.link/ml72el"><img src="images/whatsapp.png" alt="WhatsApp"></a>
-                </div>
-                <div class="child">
-                    <a href="https://www.snapchat.com/add/altawheed8?share_id=0slZeGatT28&locale=en-GB"><img
-                            src="images/snapchat.png" alt="Snapchat"></a>
-                </div>
-                <div class="child">
-                    <a href="https://www.facebook.com/profile.php?id=61555797517949&mibextid=ZbWKwL"><img
-                            src="images/facebook.png" alt="Facebook"></a>
-                </div>
-                <div class="child">
-                    <a href="https://www.instagram.com/altawheed500?igsh=MWlwc3dvcXJwOW5jdw=="><img
-                            src="images/instagram.png" alt="Instagram"></a>
-                </div>
-                <div class="child">
-                    <a href="https://www.tiktok.com/@eltawheed8?_t=8oLuXJHfWOQ&_r=1"><img src="images/tiktok.png"
-                            alt="TikTok"></a>
-                </div>
+            <div class="child">
+                <button class="button">
+                    <img src="images/whatsapp.png" alt="WhatsApp">
+                </button>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>الهاتف: 569730486 / 507599792</p>
+        <p>&copy; 2023 التوحيد للمكيفات بمكه. جميع الحقوق محفوظة.</p>
     </footer>
-    <button id="back-to-top" title="Back to top">&#8679;</button>
+
     <script>
         let slideIndex = 0;
-        let slides, interval;
+        showSlides();
 
         function showSlides() {
-            slides = document.getElementsByClassName("slideshow")[0].getElementsByTagName("img");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
+            let slides = document.querySelectorAll('.slideshow img');
+            slides.forEach((slide, index) => {
+                slide.style.display = 'none';
+            });
             slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.display = "block";
-            interval = setTimeout(showSlides, 4000);
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
         }
 
         function plusSlides(n) {
-            clearTimeout(interval);
+            let slides = document.querySelectorAll('.slideshow img');
             slideIndex += n;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            if (slideIndex < 1) { slideIndex = slides.length; }
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
             }
-            slides[slideIndex - 1].style.display = "block";
-            interval = setTimeout(showSlides, 4000);
+            if (slideIndex < 1) {
+                slideIndex = slides.length;
+            }
+            slides.forEach((slide, index) => {
+                slide.style.display = 'none';
+            });
+            slides[slideIndex - 1].style.display = 'block';
         }
-
-        window.onload = function () {
-            showSlides();
-        };
-
-        // Scroll to top button
-        let backToTopButton = document.getElementById("back-to-top");
-
-        window.onscroll = function () {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        };
-
-        backToTopButton.onclick = function () {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        };
     </script>
 </body>
 
