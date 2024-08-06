@@ -355,36 +355,79 @@
             background-color: #0056b3;
         }
 
-        /* Media Queries */
-        @media (max-width: 1024px) {
-            header.sticky {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 10px 20px;
-            }
+/* Media Queries */
+@media (max-width: 1024px) {
+    header.sticky {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
 
-            .hero h1 {
-                font-size: 3rem;
-            }
+    .hero h1 {
+        font-size: 3rem;
+    }
 
-            .hero p {
-                font-size: 1.2rem;
-            }
+    .hero p {
+        font-size: 1.2rem;
+    }
 
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-            .service-item {
-                width: calc(50% - 20px);
-            }
-        }
+    .service-item {
+        width: calc(50% - 20px);
+    }
+}
 
-        @media (max-width: 768px) {
-            header.sticky {
-                padding: 10px 15px;
-            }
+@media (max-width: 768px) {
+    header.sticky {
+        padding: 10px 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text ul {
+        padding-right: 0;
+    }
+
+    .video-container {
+        max-width: 100%;
+    }
+}
+
+body {
+    padding-top: 80px; /* Add padding to avoid header overlap */
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding-top: 120px; /* Adjust the padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 150px; /* Adjust the padding for even smaller screens */
+    }
+}
+
 
             nav ul {
                 flex-direction: column;
@@ -437,9 +480,7 @@
                     <img src="images/man.jpg" alt="صورة مكيفات 1">
                     <img src="images/man2.jpg" alt="صورة مكيفات 2">
                     <img src="images/man4.jpeg" alt="خدماتنا">
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>     
             </div>
         </section>
         <section id="services" class="intro">
